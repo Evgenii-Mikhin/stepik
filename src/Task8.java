@@ -25,11 +25,11 @@ public class Task8 {
                 }
 
                 for(int j=0; j < textLines.length; j++){
-                    if(textLines[j].startsWith(roles[i])){ //добавление нумерации строк
+                    if(textLines[j].startsWith(roles[i]+":")){ //добавление нумерации строк
                         sb.append(space);
                         sb.append((j+1));
                         sb.append(") ");
-                        sb.append(textLines[j].replace(roles2[i], "")); //удаляет роль из начала строки.
+                        sb.append(textLines[j].replaceFirst(roles2[i], "")); //удаляет роль из начала строки.
                     }
                 }
             }
